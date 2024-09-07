@@ -2,10 +2,10 @@
 # Copyright (c) 2024 Roger Brown.
 # Licensed under the MIT License.
 
-VERSION=8.0.8
-SDKVERSION=8.0.108
-VERS=8.0
-URL="https://github.com/sec/dotnet-core-freebsd-source-build/releases/download/$SDKVERSION-vmr"
+VERSION=6.0.11
+SDKVERSION=6.0.403
+VERS=6.0
+URL="https://github.com/sec/dotnet-core-freebsd-source-build/releases/download/$SDKVERSION-x64-native"
 ROOTDIR=usr/share/dotnet
 RIDARCH=$(uname -p)
 MAINTAINER=rhubarb-geek-nz@users.sourceforge.net
@@ -90,8 +90,6 @@ templates dotnet-host dotnet-sdk-$VERS
 packs/NETStandard.Library.Ref dotnet-apphost-pack-$VERS netstandard-targeting-pack-2.1
 packs/Microsoft.NETCore.App.Ref dotnet-apphost-pack-$VERS dotnet-targeting-pack-$VERS
 packs/Microsoft.AspNetCore.App.Ref dotnet-apphost-pack-$VERS aspnetcore-targeting-pack-$VERS
-packs/Microsoft.NETCore.App.Runtime.$RID dotnet-apphost-pack-$VERS dotnet-sdk-$VERS
-packs/Microsoft.AspNetCore.App.Runtime.$RID dotnet-apphost-pack-$VERS dotnet-sdk-$VERS
 EOF
 
 for d in metadata
